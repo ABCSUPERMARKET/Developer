@@ -1,0 +1,46 @@
+﻿@model List<Task2_Cloud.Models.Prod>
+@{
+    ViewBag.Title = "Get";
+}
+<br />
+<br />
+<div>
+    <a href="@Url.Action("Index", "Home")">Add new car</a>
+</div>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Profile Picture</th>
+                <th>Prod Name</th>
+                <th>Prod Desc</th>
+                <th>Prod Price</th>
+                <th>Manage</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(Task2_Cloud.Models.Prod ProdObj in Model)
+            {
+                <tr>
+                    <td>
+                        <img class="profilePicture" src="@ProdObj.FilePath" alt="@ProdObj.FilePath" />
+                    </td>
+                    <td>@ProdObj.prodName</td>
+                    <td>@ProdObj.prodDesc</td>
+                    <td>@ProdObj.prodPrice</td>
+                    <td>
+                        <span>
+                            @Html.ActionLink("Edit", "Index", "Home", new { id = ProdObj.RowKey }, new
+                            {
+                  })
+                    </span>
+                    <span>
+                        @Html.ActionLink("Delete", "Delete", "Home", new { id = ProdObj.RowKey }, new
+              { })
+                </span>
+            </td>
+        </tr>
+    }
+        </tbody>
+    </table>
+</div>

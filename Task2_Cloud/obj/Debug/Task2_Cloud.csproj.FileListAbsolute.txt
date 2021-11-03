@@ -1,0 +1,2 @@
+C:\Users\JALAAL\source\repos\Task2_Cloud\Task2_Cloud\obj\Debug\Task2_Cloud.csproj.AssemblyReference.cache
+C:\Users\JALAAL\source\repos\Task2_Cloud\Task2_Cloud\obj\Debug\Task2_Cloud.csproj.CoreCompileInputs.cache

@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<br />
+<br />
+<div>
+    <a href="@Url.Action("Get", "Home")">Car Details</a>
+</div>
+<div>
+    @using (Html.BeginForm("Index", "Home", new { id = Model.RowKey }, FormMethod.Post,
+    new { enctype = "multipart/form‐data" }))
+    {
+        <fieldset>
+            <legend>Prod</legend>
+            <body style="background‐color:lightsteelblue;">
+                <ol>
+                    <li style="padding‐left:1em">
+                        <p style="font‐family:georgia,garamond,serif;font‐size:16px;font‐style:italic;">
+                            <label>Prod Name</label>
+                        </p>
+                        <input type="text" name="Prod Name" required="required" value="@Model.prodName" />
+                    </li>
+                    <li style="padding‐left:1em">
+                        <p style="font‐family:georgia,garamond,serif;font‐size:16px;font‐style:italic;">
+                            <label>Prod Desc</label>
+                        </p>
+                        <input type="text" name="Prod Desc" required="required" value="@Model.prodDesc" />
+                    </li>
+                    <li style="padding‐left:1em">
+                        <p style="font‐family:georgia,garamond,serif;font‐size:16px;font‐style:italic;">
+                            <label>Prod Price</label>
+                        </p>
+                        <input type="text" name="ProdPrice" required="required" value="@Model.prodPrice" />
+                    </li>
+                    <li style=" padding‐left: 1em">
+                        <p style="font‐family:georgia,garamond,serif;font‐size:16px;font‐style:italic;">
+                            <label>Profile Picture</label>
+                        </p>
+                        <input type="file" name="uploadFile" />
+                    </li>
+                </ol>
+                <input type="submit" value="Submit" />
+        </fieldset>
+    }
+</div>
